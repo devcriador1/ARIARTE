@@ -1,4 +1,4 @@
-import { Product, Category, Material, Scale, DetailLevel } from './types';
+import { Product, Category, Material, Scale, DetailLevel, ProductType } from './types';
 
 export const CONTACT_INFO = {
   phone: '(19) 997092854',
@@ -26,7 +26,8 @@ export const PRODUCTS: Product[] = [
     colors: ['Preto', 'Neon', 'Vermelho'],
     isNew: true,
     price: 289.90,
-    promotionalPrice: 249.90
+    promotionalPrice: 249.90,
+    type: ProductType.PHYSICAL
   },
   {
     id: '2',
@@ -42,24 +43,26 @@ export const PRODUCTS: Product[] = [
     colors: ['Branco', 'Seda', 'Azul', 'Amarelo'],
     isNew: false,
     price: 89.90,
-    promotionalPrice: 69.90
+    promotionalPrice: 69.90,
+    type: ProductType.PHYSICAL
   },
   {
     id: '3',
-    name: 'Braço Robótico',
+    name: 'Braço Robótico (Arquivos)',
     category: Category.PECAS,
     imageUrl: 'https://picsum.photos/id/250/600/600',
     modelUrl: DEMO_MODEL_URL,
-    description: 'Modelo funcional de braço robótico com 6 graus de liberdade. Requer montagem.',
+    description: 'Pack completo de STLs para imprimir seu próprio braço robótico. Inclui manual de montagem.',
     difficulty: 'Extremo',
-    printTime: '48h',
+    printTime: '48h (Total)',
     material: Material.ABS,
     scale: Scale.GRANDE,
     detailLevel: DetailLevel.ALTO,
-    colors: ['Cinza', 'Laranja', 'Amarelo'],
+    colors: [],
     isNew: true,
-    price: 450.00,
-    promotionalPrice: 389.90
+    price: 45.00,
+    type: ProductType.DIGITAL,
+    fileSize: '450 MB'
   },
   {
     id: '4',
@@ -75,7 +78,8 @@ export const PRODUCTS: Product[] = [
     colors: ['Gradiente', 'Dourado', 'Roxo'],
     isNew: true,
     price: 129.90,
-    promotionalPrice: 99.90
+    promotionalPrice: 99.90,
+    type: ProductType.PHYSICAL
   },
   {
     id: '5',
@@ -90,7 +94,8 @@ export const PRODUCTS: Product[] = [
     detailLevel: DetailLevel.BAIXO,
     colors: ['Preto', 'Branco', 'Amarelo'],
     isNew: false,
-    price: 79.90
+    price: 79.90,
+    type: ProductType.PHYSICAL
   },
   {
     id: '6',
@@ -105,24 +110,26 @@ export const PRODUCTS: Product[] = [
     detailLevel: DetailLevel.ALTO,
     colors: ['Cinza Transparente'],
     isNew: false,
-    price: 45.00
+    price: 45.00,
+    type: ProductType.PHYSICAL
   },
   {
     id: '7',
-    name: 'Busto Cyberpunk',
+    name: 'Busto Cyberpunk (STL)',
     category: Category.ARTE,
     imageUrl: 'https://picsum.photos/id/338/600/600',
     modelUrl: DEMO_MODEL_URL,
-    description: 'Escultura detalhada de personagem futurista para pintura e coleção.',
+    description: 'Arquivo digital de alta resolução para impressão em resina. Pré-suportado.',
     difficulty: 'Difícil',
-    printTime: '18h',
+    printTime: 'Variável',
     material: Material.RESINA,
     scale: Scale.PEQUENA,
     detailLevel: DetailLevel.ALTO,
-    colors: ['Cinza Primer', 'Gradiente'],
+    colors: [],
     isNew: true,
-    price: 159.90,
-    promotionalPrice: 139.90
+    price: 29.90,
+    type: ProductType.DIGITAL,
+    fileSize: '1.2 GB'
   },
   {
     id: '8',
@@ -137,7 +144,26 @@ export const PRODUCTS: Product[] = [
     detailLevel: DetailLevel.BAIXO,
     colors: ['Azul', 'Preto', 'Amarelo'],
     isNew: false,
-    price: 39.90
+    price: 39.90,
+    type: ProductType.PHYSICAL
+  },
+  {
+    id: '9',
+    name: 'Pack Miniaturas RPG (STL)',
+    category: Category.MINIATURES,
+    imageUrl: 'https://picsum.photos/id/237/600/600',
+    description: 'Coleção com 10 guerreiros futuristas para jogos de tabuleiro. Arquivos Otimizados.',
+    difficulty: 'Difícil',
+    printTime: 'Variável',
+    material: Material.RESINA,
+    scale: Scale.PEQUENA,
+    detailLevel: DetailLevel.ALTO,
+    colors: [],
+    isNew: true,
+    price: 59.90,
+    promotionalPrice: 39.90,
+    type: ProductType.DIGITAL,
+    fileSize: '850 MB'
   }
 ];
 
@@ -145,4 +171,5 @@ export const CATEGORIES = Object.values(Category);
 export const MATERIALS = Object.values(Material);
 export const SCALES = Object.values(Scale);
 export const DETAIL_LEVELS = Object.values(DetailLevel);
+export const PRODUCT_TYPES = Object.values(ProductType);
 export const ALL_COLORS = Array.from(new Set(PRODUCTS.flatMap(p => p.colors)));

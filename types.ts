@@ -27,6 +27,11 @@ export enum DetailLevel {
   ALTO = 'Alto'
 }
 
+export enum ProductType {
+  PHYSICAL = 'Físico',
+  DIGITAL = 'Arquivo STL'
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -35,7 +40,7 @@ export interface Product {
   modelUrl?: string; // For 3D Viewer
   description: string;
   difficulty: 'Fácil' | 'Médio' | 'Difícil' | 'Extremo';
-  printTime: string;
+  printTime: string; // Or estimated print time for digital
   material: Material;
   scale: Scale;
   detailLevel: DetailLevel;
@@ -43,6 +48,8 @@ export interface Product {
   isNew?: boolean;
   price: number;
   promotionalPrice?: number;
+  type: ProductType;
+  fileSize?: string; // For digital products
 }
 
 export interface PrintSettings {
@@ -66,4 +73,5 @@ export interface FilterState {
   detailLevel: DetailLevel[];
   colors: string[];
   searchTerm: string;
+  types: ProductType[];
 }

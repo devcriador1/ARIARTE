@@ -7,7 +7,8 @@ const slides = [
     id: 1,
     title: "SUA IMAGINAÇÃO É O NOSSO LIMITE",
     subtitle: "Do conceito à realidade tangível em filamento e resina.",
-    image: "https://picsum.photos/id/58/1600/600",
+    // Image: Close up of a 3D printer nozzle extruding material (High Tech)
+    image: "https://images.unsplash.com/photo-1631541909061-71e349d1f203?q=80&w=1600&auto=format&fit=crop",
     badge: "ARIARTE 3D",
     color: "from-cyber-secondary",
     cta: "Explorar Artes"
@@ -16,7 +17,8 @@ const slides = [
     id: 2,
     title: "PRODUTOS PERSONALIZADOS",
     subtitle: "Alta qualidade, acabamento premium e fidelidade técnica.",
-    image: "https://picsum.photos/id/133/1600/600",
+    // Image: Detailed abstract 3D printed geometry (Quality/Art)
+    image: "https://images.unsplash.com/photo-1633534573426-3832c3f15d85?q=80&w=1600&auto=format&fit=crop",
     badge: "QUALIDADE SUPERIOR",
     color: "from-cyber-primary",
     cta: "Ver Projetos"
@@ -25,7 +27,8 @@ const slides = [
     id: 3,
     title: "PROMOÇÕES ESPECIAIS",
     subtitle: "Confira as peças exclusivas com preços de outro mundo.",
-    image: "https://picsum.photos/id/64/1600/600",
+    // Image: Colorful Filament Spools (Stock/Sales vibe)
+    image: "https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?q=80&w=1600&auto=format&fit=crop",
     badge: "OFERTA DA SEMANA",
     color: "from-cyber-accent",
     cta: "Comprar Agora"
